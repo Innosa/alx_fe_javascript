@@ -16,6 +16,15 @@ function showRandomQuote() {
   }
 }
 
+function createAddQuoteForm() {
+  // Find or create the form container
+  let formContainer = document.getElementById("formContainer");
+  if (!formContainer) {
+    formContainer = document.createElement("div");
+    formContainer.id = "formContainer";
+    document.body.appendChild(formContainer);
+  }
+}
 // Function to add a new quote
 function addQuote() {
   const newQuoteText = document.getElementById("newQuoteText").value;
